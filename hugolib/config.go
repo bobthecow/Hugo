@@ -187,4 +187,6 @@ func (c *Config) findConfigFile(configFileName string) (string, error) {
 			return "", fmt.Errorf("config file not found at: %s", t)
 		}
 	}
+
+	return "", nil
 }

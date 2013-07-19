@@ -236,6 +236,8 @@ func (p *Page) Permalink() template.HTML {
 		x := replaceExtension(strings.TrimSpace(t), p.Extension)
 		return template.HTML(MakePermalink(string(p.Site.BaseUrl), strings.TrimSpace(p.Section)+"/"+x))
 	}
+
+	return template.HTML("")
 }
 
 func (page *Page) handleTomlMetaData(datum []byte) (interface{}, error) {
